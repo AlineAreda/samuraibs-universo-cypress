@@ -16,7 +16,7 @@ describe('login', () => {
 
         before(() => {
             cy.postUser(user)
-           
+
         })
 
         it('deve logar com sucesso', () => {
