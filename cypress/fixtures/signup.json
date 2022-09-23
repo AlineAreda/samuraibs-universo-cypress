@@ -1,0 +1,23 @@
+{
+  "success": {
+    "name": "Aline Areda",
+    "email": "aline@samuraibs.com",
+    "password": "test3qa"
+  },
+  "email_dup": {
+    "name": "Caio Vierira",
+    "email": "caio@samuraibs.com",
+    "password": "test3qa",
+    "is_provider": true
+  },
+  "email_inv": {
+    "name": "Marina Baggio",
+    "email": "mari.gmail.com",
+    "password": "test3qa"
+  },
+  "short_password": {
+    "name": "Cassio Martins",
+    "email": "cassio@samuraibs.com",
+    "password": null
+  }
+}
