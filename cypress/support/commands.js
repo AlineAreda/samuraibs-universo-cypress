@@ -1,28 +1,4 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
 
 import moment from 'moment'
 import loginPage from './pages/login'
@@ -77,16 +53,18 @@ Cypress.Commands.add('recoveryPass', function (email) {
 
 Cypress.Commands.add('createAppointment', function (hour) {
     let now = new Date()
-    now.setDate(now.getDate() + 2)
+    now.setDate(now.getDate() + 1)
 
-    Cypress.env('appointmentDay', now.getDate())
+    Cypress.env('appointmentDate', now)
 
-    const day = moment(now).format(`YYYY-MM-DD ${hour}:00`)
+    const date = moment(now).format(`YYYY-MM-DD ${hour}:00`)
 
     const payload = {
         provider_id: Cypress.env('providerId'),
-        date: day
+        date: date
     }
+
+    cy.log(payload)
 
     cy.request({
         method: 'POST',
@@ -95,14 +73,11 @@ Cypress.Commands.add('createAppointment', function (hour) {
         headers: {
             authorization: 'Bearer ' + Cypress.env('apiToken')
         }
-
-
     }).then(function (response) {
         expect(response.status).to.eq(200)
-
     })
-})
 
+})
 
 Cypress.Commands.add('setProviderId', function (providerEmail) {
 
@@ -151,7 +126,7 @@ Cypress.Commands.add('apiLogin', function (user, setLocalStorage = false) {
             window.localStorage.setItem('@Samurai:user', JSON.stringify(user))
         }
     })
-    
+
     if (setLocalStorage) cy.visit('/dashboard')
 })
 
