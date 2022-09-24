@@ -6,6 +6,7 @@ describe('cadastro', function () {
 
     before(function () {
         cy.fixture('signup').then(function (signup) {
+             //exemplo gestão da massa usando fixtures
             this.success = signup.success
             this.email_dup = signup.email_dup
             this.email_inv = signup.email_inv

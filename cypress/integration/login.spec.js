@@ -3,9 +3,9 @@ import loginPage from '../support/pages/login'
 import dashPage from '../support/pages/dash'
 
 
-describe('login', () => {
+describe('login', function() {
 
-    context('quando o usuário é muito bom', () => {
+    context('quando o usuário é muito bom', function() {
 
         const user = {
             name: 'Gerson Jassa',
@@ -14,12 +14,12 @@ describe('login', () => {
             is_provider: true
         }
 
-        before(() => {
+        before(function() {
             cy.postUser(user)
 
         })
 
-        it('deve logar com sucesso', () => {
+        it('deve logar com sucesso', function() {
             loginPage.go()
             loginPage.form(user)
             loginPage.submit()
@@ -28,7 +28,7 @@ describe('login', () => {
         })
     })
 
-    context('quando o usuário é bom mas a senha está incorreta', () => {
+    context('quando o usuário é bom mas a senha está incorreta', function() {
 
         let user = {
             name: 'Celso Kamura',
@@ -37,13 +37,13 @@ describe('login', () => {
             is_provider: true
         }
 
-        before(() => {
-            cy.postUser(user).then(() => {
+        before(function() {
+            cy.postUser(user).then(function() {
                 user.password = 'ka123'
             })
         })
 
-        it('deve notificar erro de credenciais', () => {
+        it('deve notificar erro de credenciais', function() {
             loginPage.go()
             loginPage.form(user)
             loginPage.submit()
@@ -54,7 +54,7 @@ describe('login', () => {
         })
     })
 
-    context('quando o formato do email é inválido', () => {
+    context('quando o formato do email é inválido', function() {
 
         const emails = [
             'aline.com.br',
@@ -66,12 +66,12 @@ describe('login', () => {
             'abc123'
         ]
 
-        before(() => {
+        before(function() {
             loginPage.go()
         })
 
-        emails.forEach((email) => {
-            it('não deve logar com email: ' + email, () => {
+        emails.forEach(function(email) {
+            it('não deve logar com email: ' + email, function() {
                 const user = { email: email, password: 'test3qa' }
 
                 loginPage.form(user)
@@ -83,21 +83,21 @@ describe('login', () => {
 
     })
 
-    context('quando não preencho nenhum dos campos', () => {
+    context('quando não preencho nenhum dos campos', function() {
 
         const alertMessages = [
             'E-mail é obrigatório',
             'Senha é obrigatória'
         ]
 
-        before(() => {
+        before(function() {
             loginPage.go()
             loginPage.submit()
         })
 
-        alertMessages.forEach((alert) => {
+        alertMessages.forEach(function(alert)  {
 
-            it('deve exibir ' + alert.toLocaleLowerCase(), () => {
+            it('deve exibir ' + alert.toLocaleLowerCase(), function() {
                 loginPage.alert.haveText(alert)
 
             })
