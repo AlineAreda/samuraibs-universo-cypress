@@ -1,6 +1,30 @@
 # Samuraibs -Cypress
 
-Projeto de automação de testes E2E.
+Projeto de automação de testes E2E barbearia Samuraibs.
+
+URL WEB: https://samuraibs-web-areda.herokuapp.com
+URL API: https://samuraibs-api-areda.herokuapp.com
+
+### Cadastro
+- [X] Deve cadastrar com sucesso
+- [X] Não deve cadastrar o usuário quando email já existe
+- [X] Deve exibir mensagem de alerta quando o email é incorreto
+- [X]  Deve exibir mensagem de alerta quando a senha é menor que 6 caracteres
+- [X] Deve exibir mensagem de campos obrigátorios quando não preencho nenhum dos campos (nome, senha, email)
+
+### Login
+- [X] Deve logar com sucesso
+- [X] Deve notificar erro de credenciais
+- [X] Não deve logar quando o formato do email é inválido 
+- [X]  Não deve logar quando não preencher nenhum dos campos
+
+### Resgate de senha
+- [X] Deve  poder resgatar a senha por email
+- [X] Deve poder cadastrar uma nova senha
+
+### Dashboard de agendamento
+- [X] Deve exibir agendamento no dasboard
+
 
 ## 🚀 Tecnologias
 
@@ -11,7 +35,6 @@ Projeto de automação de testes E2E.
 ## 👨🏻‍💻 Como executar o projeto
 
 [Node.js](https://nodejs.org/) v16 ou superior para executar.
-
 
 
 ### ✨ Instalação e uso da arquitetura
