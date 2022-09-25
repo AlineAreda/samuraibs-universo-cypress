@@ -1,6 +1,6 @@
 # Samuraibs -Cypress
 
-Projeto de automação de testes.
+Projeto de automação de testes E2E.
 
 ## 🚀 Tecnologias
 
