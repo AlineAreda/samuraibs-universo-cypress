@@ -25,6 +25,7 @@ describe('login', function() {
             loginPage.submit()
 
             dashPage.header.userLoggedIn(user.name)
+            
         })
     })
 

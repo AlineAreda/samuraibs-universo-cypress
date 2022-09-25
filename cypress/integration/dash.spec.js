@@ -26,7 +26,9 @@ describe('dashboard', function () {
             dashPage.selectDay(date)
             dashPage.appointmentShouldBe(customer, appointment.hour)
         })
+        
     })
+    
 })
 
 
