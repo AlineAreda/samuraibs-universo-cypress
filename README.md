@@ -2,9 +2,9 @@
 
 Projeto de automação de testes E2E barbearia Samuraibs.
 
-[URL WEB](https://samuraibs-web-areda.herokuapp.com): https://samuraibs-web-areda.herokuapp.com
+URL WEB: https://samuraibs-web-areda.herokuapp.com
 
-[URL API](https://samuraibs-api-areda.herokuapp.com): https://samuraibs-api-areda.herokuapp.com
+URL API: https://samuraibs-api-areda.herokuapp.com
 
 ### Cadastro
 - [X] Deve cadastrar com sucesso
