@@ -56,7 +56,7 @@ URL API: https://samuraibs-api-areda.herokuapp.com
     - `npx cypress run` (navegador: default electron)
       - `npx cypress run --browser chrome` 
       
- - [GitHub Action](https://github.com/AlineAreda/samuraibs-universo-cypress/actions) selecione o browser para execução.
+ - [GitHub Action](https://github.com/AlineAreda/samuraibs-universo-cypress/actions) selecione o browser para visualizar a execução.
 
 ## 📝 License
 
