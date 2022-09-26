@@ -1,6 +1,6 @@
 # Samuraibs -Cypress
 
-![AppVeyor tests](https://img.shields.io/appveyor/tests/AlineAreda/samuraibs-universo-cypress)
+![Badge Concluído](http://img.shields.io/static/v1?label=STATUS&message=%20CONCLUIDO&color=GREEN&style=for-the-badge)
 
 Projeto de automação de testes E2E barbearia Samuraibs.
 
