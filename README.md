@@ -1,5 +1,7 @@
 # Samuraibs -Cypress
 
+![AppVeyor tests](https://img.shields.io/appveyor/tests/AlineAreda/samuraibs-universo-cypress)
+
 Projeto de automação de testes E2E barbearia Samuraibs.
 
 URL WEB: https://samuraibs-web-areda.herokuapp.com
