@@ -8,6 +8,10 @@ URL WEB: https://samuraibs-web-areda.herokuapp.com
 
 URL API: https://samuraibs-api-areda.herokuapp.com
 
+<h1 align="center">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src=".github/assets/samuraibs-web.PNG" />
+</h1>
+
 ### Cadastro
 - [X] Deve cadastrar com sucesso
 - [X] Não deve cadastrar o usuário quando email já existe
